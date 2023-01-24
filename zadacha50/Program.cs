@@ -30,5 +30,13 @@ Console.WriteLine("Введите номер строки:");
 int rows = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите номер столбца:");
 int colons = Convert.ToInt32(Console.ReadLine());
-int number = matrix[rows-1, colons-1];
-Console.WriteLine($"На {rows} строчке {colons} столбца находится число: {number}");
+int number = 0;
+if (rows <= m & colons <= n)
+{
+    number = matrix[rows - 1, colons - 1];
+    Console.WriteLine($"На {rows} строчке {colons} столбца находится число: {number}");
+}
+else
+{
+    Console.WriteLine($"Позиции с индексом ({rows},{colons}) не существует!!! ");
+}
